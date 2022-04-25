@@ -1,4 +1,5 @@
 var x = 0;
+var e = "<hr/>";
 var array = Array();
 
 function add_element_to_array()
@@ -14,7 +15,7 @@ array[x+7] = document.getElementById("feedback7").value;
 array[x+8] = document.getElementById("feedback8").value;
 array[x+9] = document.getElementById("feedback9").value;
  alert("Successfully Added Feedback Details!");
- x++;
+ 
  document.getElementById("feedback").value = "";
  document.getElementById("feedback1").value = "";
  document.getElementById("feedback2").value = "";
@@ -25,14 +26,13 @@ array[x+9] = document.getElementById("feedback9").value;
  document.getElementById("feedback7").value = "";
  document.getElementById("feedback8").value = "";
  document.getElementById("feedback9").value = "";
-
 }
 
 function display_array()
 {
-   var e = "<hr/>";   
+      
   //document.write ("This is a warning message!");
-   e+="<h2>"+"Feedback Details"+"</h2>"; 
+   e+="<h2>"+"Questionnaire Details"+"</h2>"; 
    e+="<table>";
    for (var y=0; y<array.length; y++)
    {
@@ -42,5 +42,7 @@ function display_array()
       
    }
    e+="</table>";
+   e+="<br/>";
+   
    document.getElementById("result").innerHTML = e;
 }
